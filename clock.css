@@ -1,0 +1,80 @@
+body{
+    width: 100%;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.bg{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#clock-body{
+    width: 500px;
+    height: 500px;
+    transform: translateY(-3);
+    position: absolute;
+    top: calc(50vh - 500px/2);
+    left: calc(50vw - 500px/2);
+    border-radius: 50%;
+    background-color: rgba(69, 106, 136, 0.274);
+    border: 0px solid #cdd1d1;
+
+}
+.clck{
+    width: 500px;
+    height: 500px;
+    position:absolute;
+    top: calc(50vh - 500px/2);
+    left: calc(50vw - 500px/2);
+    box-shadow: 0 0 5px 5px rgba(69, 106, 136, 0.274);
+    border-radius: 50%;
+}
+.needle{
+    transform-origin: 0%;
+    transition: all 0.05s;
+    position: absolute;
+    border-radius: 15px;
+    border: 2px solid;
+    top: 49.2%;
+    left: 50.2%;
+    z-index: 2;
+    box-shadow: 0px 0px 4px 2px #72838388;
+    transform: rotate(270deg);
+    background-color: #cdd1d1;
+
+}
+.clock-center{
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    border-radius: 50%;
+    z-index: 3;
+    top: calc(50vh - 15px/2);
+    left: calc(50vw - 15px/2);
+    background-color: black;
+    box-shadow: 0px 0px 4px 2px #72838388;
+}
+.needle[id='hours']{
+    width: 140px;
+    height: 8px;
+    
+}
+.needle[id='minutes']{
+    width: 180px;
+    height: 8px;
+}
+.needle[id='seconds']{
+    width: 210px;
+    height: 3px;
+}
